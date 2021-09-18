@@ -25,21 +25,14 @@
 
 <body style="background-color: #ffc300">
 	<h1 class="sign_up_title">Sign Up</h1>
-	<form class="sign_up">
-		<label for="fname">Enter First Name:</label><br>
-		<input type="text" name="fname" name="fname"><br>
-		<label for="lname">Enter Last Name:</label><br>
-		<input type="text" name="lname" name="lname"><br>
-		<label for="username">Enter Username:</label><br>
-		<input type="text" name="username" name="username"><br>
-		<label for="password">Enter Password:</label><br>
-		<input type="text" name="password" name="password"><br>
-		<label for="password_confirm">Confirm Password:</label><br>
-		<input type="text" name="password_confirm" name="password_confirm"><br>
-		<div>
-			<input type="submit" name="Submit"> 
-		</div>
+	<form method="post" novalidate>
+		{% csfr_token %}
+		<table border="1">
+			{{form.as_p}}
+		</table>
+		<button type="submit">Submit</button>
 	</form>
+		
 	
 
 </body>
