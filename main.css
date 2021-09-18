@@ -18,20 +18,25 @@
   line-height: 45px;
 }
 
-.score {
+.points {
   position: relative;
   display: inline-block;
   width: 25%;
 }
 
 .row:nth-child(1) {
-  background: gold;
+  background: black;
+  color: white;
 }
 
 .row:nth-child(2) {
-  background: #c0c0c0;
+  background: gold;
 }
 
 .row:nth-child(3) {
+  background: #c0c0c0;
+}
+
+.row:nth-child(4) {
   background: #cd7f32;
 }
