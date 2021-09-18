@@ -14,17 +14,23 @@
   border-bottom: 1px solid #afafaf;
 }
 
+.rank {
+  position: relative;
+  display: inline-block;
+  width: 20%;
+}
+
 .name {
   position: relative;
   display: inline-block;
-  width: 50%;
+  width: 40%;
   line-height: 45px;
 }
 
 .points {
   position: relative;
   display: inline-block;
-  width: 50%;
+  width: 40%;
 }
 
 .row:nth-child(1) {
