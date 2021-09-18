@@ -45,9 +45,9 @@
 
 <body style="background-color: #ffc300">
 	<h1 class="sign_up_title">Sign Up</h1>
-	<form method="post" novalidate>
+	<form method="post" novalidate class="form_group">
 		{% csfr_token %}
-		<div class="form_group">
+		<div>
 			<label>Name:</label> 
 			{{form.name}}
 		</div>
