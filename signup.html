@@ -19,6 +19,26 @@
     		-webkit-transform: translateX(-50%) translateY(-50%);
     		transform: translateX(-50%) translateY(-50%);
 		}
+		.submit_btn {
+			position: absolute;
+			left: 50%;
+			top:  50%;
+			-moz-transform: translateX(-50%) translateY(-50%);
+    		-webkit-transform: translateX(-50%) translateY(-50%);
+    		transform: translateX(-50%) translateY(-50%);
+			color: skyblue;
+		}
+		.form_group {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			-moz-transform: translateX(-50%) translateY(-50%);
+    		-webkit-transform: translateX(-50%) translateY(-50%);
+    		transform: translateX(-50%) translateY(-50%);
+    		font-family: "Lato";
+    		font: sans-serif;
+    		color: black;
+		}
 	</style>
 <title>Purdue Fantasy Signup</title>
 </head>
@@ -27,10 +47,31 @@
 	<h1 class="sign_up_title">Sign Up</h1>
 	<form method="post" novalidate>
 		{% csfr_token %}
-		<table border="1">
-			{{form.as_p}}
-		</table>
-		<button type="submit">Submit</button>
+		<div class="form_group">
+			<label>Name:</label> 
+			{{form.name}}
+		</div>
+		<div class="form_group">
+			<label>Username:</label> 
+			{{form.username}}
+		</div>
+		<div class="form_group">
+			<label>Biography:</label> 
+			{{form.biography}}
+		</div>
+		<div class="form_group">
+			<label>Email:</label> 
+			{{form.email}}
+		</div>
+		<div class="form_group">
+			<label>Password:</label> 
+			{{form.password}}
+		</div>
+		<div class="form_group">
+			<label>Confirm Password:</label>
+			{{form.confirm_password}}
+		</div>
+		<button type="submit" class="submit_btn">Submit</button>
 	</form>
 		
 	
