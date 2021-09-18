@@ -1,6 +1,9 @@
 #container {
-  width: 600px;
+  width: 100%;
   height: auto;
+  text-align: center;
+  float: left;
+  position: relative;
 }
 
 .row {
@@ -14,14 +17,14 @@
 .name {
   position: relative;
   display: inline-block;
-  width: 75%;
+  width: 50%;
   line-height: 45px;
 }
 
 .points {
   position: relative;
   display: inline-block;
-  width: 25%;
+  width: 50%;
 }
 
 .row:nth-child(1) {
