@@ -15,7 +15,8 @@ With the specificity needed for our database queries needed, we had to dive deep
 We are proud of the UI that we created for the webpage and the leaderboard; we went for a simplistic design for both the home page and profile page, and we love how it turned out. In addition, we are proud to have implemented a SQLlite database to configure a secure login page and a dynamic site that refreshes the points leaderboard. As this is the first hackathon for the majority of our group, we learned a lot about the process of a hackathon and how to realize our ideas into code. Functionality wise, we learned more about web dev and introduction of the Django backend for most members of the group.
 
 ## What's next
-We would like to host the site in the cloud so that it is accessible to everyone (currently, the site can only be run on the local machine). Additionally, we want to add functionality that generates favors after each league ends to add an extra level to the challenge. 
+We would like to host the site in the cloud so that it is accessible to everyone (currently, the site can only be run on the local machine). Additionally, we want to add functionality that generates favors after each league ends to add an extra level to the challenge. We would also like to develop an updated and improved UI for the Login/Register, League selector and Challenge Selector pages and a system that verifies if contestants complete challenges.
+
 
 ## Built With
 Python Django, HTML, CSS, Javascript, SQLite Database
