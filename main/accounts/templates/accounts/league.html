@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'accounts/css/main.css' %}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PURDUE FANTASY Petecoin</title>
+    <!-- stylesheets -->
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,700,800" rel="stylesheet">
+    <link href='{% static "accounts/css/open-iconic-bootstrap.min.css" %}' rel="stylesheet">
+    <link href='{% static "accounts/css/animate.css" %}' rel="stylesheet">
+    <link href='{% static "accounts/css/owl.carousel.min.css" %}' rel="stylesheet">
+    <link href='{% static "accounts/css/owl.theme.default.min.css" %}' rel="stylesheet">
+    <link href='{% static "accounts/css/aos.css" %}' rel="stylesheet">
+    <link href='{% static "accounts/css/ionicons.min.css" %}' rel="stylesheet">
+    <link href='{% static "accounts/css/bootstrap-datepicker.css" %}' rel="stylesheet">
+    <link href='{% static "accounts/css/jquery.timepicker.css" %}' rel="stylesheet">
+    <link href='{% static "accounts/css/icomoon.css" %}' rel="stylesheet">
+    <link href='{% static "accounts/css/style.css" %}' rel="stylesheet">
+    <link href='{% static "accounts/css/additional.css" %}' rel="stylesheet">
+    <!-- meta -->
+    <link href='{% static "accounts/images/favicon/apple-touch-icon.png" rel="apple-touch-icon" %}' sizes="180x180">
+    <link href='{% static "accounts/images/favicon/favicon-32x32.png" %}' rel="icon">
+    <link href='{% static "accounts/images/favicon/favicon-16x16.png" %}' rel="icon" sizes="16x16" type="image/png">
+    <link href='site.webmanifest' rel="manifest">
+    <link color="#5bbad5" href='{% static "accounts/images/favicon/safari-pinned-tab.svg" %}' rel="mask-icon">
+    <link href='{% static "accounts/images/favicon/favicon.ico" %}' rel="shortcut icon">
+    <meta content="#da532c" name="msapplication-TileColor">
+    <meta content='{% static "accounts/images/favicon/browserconfig.xml" %}' name="msapplication-config">
+    <meta content="#ffffff" name="theme-color">
+    <meta content="Fenil Gala" name="author">
+    <meta content="website" property="og:type" />
+    <meta content="Fantasy Purdue" property="og:title" />
+    <meta content="Earn Petecoins and compete against other students and friends on who can earn the most!" property="og:description" />
+    <meta content='{% static "accounts/images/full-logo.png" %}' property="og:image" />
+</head>
+<body>
+<section class="ftco-section schedule" id="leaderboard">
+    <div class="container" id="schedule-container">
+        <div class="row no-gutters justify-content-center mb-5 pb-5">
+            <div class="col-md-7 heading-section ftco-animate" id="fixed-width">
+                <h2 class="mb-4 text-center">Leaderboard</h2>
+                <table class="events">
+                    <tr>
+                        <td class="time"><strong>PeteCoins</strong></td>
+                        <td class="event">Name</td>
+                    </tr>
+                    {% for p in league %}
+                    <tr>
+                        <td class="time"><strong>{{ p.balance }}</strong></td>
+                        <td class="event">{{ p.username }}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- loader -->
+<div class="show fullscreen" id="ftco-loader">
+  <svg class="circular" height="48px" width="48px">
+    <circle class="path-bg" cx="24" cy="24" fill="none" r="22" stroke="#eeeeee" stroke-width="4"></circle>
+    <circle class="path" cx="24" cy="24" fill="none" r="22" stroke="#F96D00" stroke-miterlimit="10" stroke-width="4"></circle>
+  </svg>
+</div>
+<script src='{% static "accounts/js/jquery.min.js" %}'></script>
+<script src='{% static "accounts/js/jquery-ui.min.js" %}'></script>
+<script src='{% static "accounts/js/jquery-migrate-3.0.1.min.js" %}'></script>
+<script src='{% static "accounts/js/popper.min.js" %}'></script>
+<script src='{% static "accounts/js/bootstrap.min.js" %}'></script>
+<script src='{% static "accounts/js/jquery.easing.1.3.js" %}'></script>
+<script src='{% static "accounts/js/jquery.waypoints.min.js" %}'></script>
+<script src='{% static "accounts/js/jquery.stellar.min.js" %}'></script>
+<script src='{% static "accounts/js/owl.carousel.min.js" %}'></script>
+<script src='{% static "accounts/js/aos.js" %}'></script>
+<script src='{% static "accounts/js/jquery.animateNumber.min.js" %}'></script>
+<script src='{% static "accounts/js/bootstrap-datepicker.js" %}'></script>
+<script src='{% static "accounts/js/jquery.anchorScroll.min.js" %}'></script>
+<script src='{% static "accounts/js/particles.min.js" %}'></script>
+<script src='{% static "accounts/js/particle.js" %}'></script>
+<script src='{% static "accounts/js/scrollax.min.js" %}'></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s"></script>
+<script src='{% static "accounts/js/main.js" %}'></script>
+</body>
+
+</html>
