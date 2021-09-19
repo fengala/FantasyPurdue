@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% load static %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<div class="row h-100 justify-content-center align-items-center">
+<h1>{{ profile.username }}</h1>
+<p style="margin-left: 2.5em;padding: 0 7em 2em 0;font-size:150%;">
+<a href="{% url 'index' %}">Home</a><br>
+{{ profile.name }}<br>
+{{ profile.bio }}<br>
+PeteCoins: {{ profile.balance }}<br>
+My Leagues:
+    {% for l in leagues %}
+    <a href="{% url 'league' l.name %}">{{ l.name }}</a>
+    {% endfor %}
+<br>
+Current Challenge: {{ profile.current_challenge }}<br>
+{% if profile.current_challenge %}
+<div>
+<form method="post">
+    {% csrf_token %}
+    <input type="hidden" name="challenge" value="accept">
+    <button type="submit" class="submit_btn">Accept Challenge</button>
+</form>
+<br>
+<form method="post">
+    {% csrf_token %}
+    <input type="hidden" name="challenge" value="decline">
+    <button type="submit" class="submit_btn">Decline Challenge</button>
+</form>
+</div>
+{% else %}
+    <a href="{% url 'challenge_selector' %}">Select a Challenge</a>
+{% endif %}
+</p>
+<style>
+
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+</style>
+</div>
