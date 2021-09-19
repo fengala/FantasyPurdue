@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+	
+	body, h1, h2, h3, h4, h5, h6 {font-family: "Lato", sans-serif}
+
+		.title_text {
+			position: absolute;
+			left: 50%;
+			-moz-transform: translateX(-50%) translateY(-50%);
+		    -webkit-transform: translateX(-50%) translateY(-50%);
+		    transform: translateX(-50%) translateY(-50%);
+			color: black;
+		}
+
+		.login {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			-moz-transform: translateX(-50%) translateY(-50%);
+		    -webkit-transform: translateX(-50%) translateY(-50%);
+		    transform: translateX(-50%) translateY(-50%);
+		}
+		.submit_btn {
+			position: absolute;
+			color: skyblue;
+		}
+
+</style>
+
+<title>Purdue Fantasy Login </title>
+</head>
+
+<body style="background-color:#ffc300">
+
+<!-- The top title text -->
+<h1 class="title_text">Purdue Fantasy Login</h1>
+
+	<form method="post" novalidate class="login">
+		{% csfr_token %}
+		<div>
+			<label></label>
+			{{form.}}
+		</div><br>
+		<div>
+			<label></label>
+			{{form.}}
+		</div><br>
+		<button type="submit" class="submit_btn">Submit</button>
+	</form>
+</body>
