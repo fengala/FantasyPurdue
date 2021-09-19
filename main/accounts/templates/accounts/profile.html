@@ -17,13 +17,13 @@ My Leagues:
 Current Challenge: {{ profile.current_challenge }}<br>
 {% if profile.current_challenge %}
 <div>
-<form method="post">
+<form method="post" autocomplete="off">
     {% csrf_token %}
     <input type="hidden" name="challenge" value="accept">
     <button type="submit" class="submit_btn">Accept Challenge</button>
 </form>
 <br>
-<form method="post">
+<form method="post" autocomplete="off">
     {% csrf_token %}
     <input type="hidden" name="challenge" value="decline">
     <button type="submit" class="submit_btn">Decline Challenge</button>

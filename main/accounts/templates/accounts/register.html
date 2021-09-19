@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <body>
-        <form method="post">
+        <form method="post" autocomplete="off">
             {% csrf_token %}
             {{ profile_form.as_p }}
             {{ register_form.as_p }}
